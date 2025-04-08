@@ -1,4 +1,4 @@
-"use client"; // Ensures it's a client-side component
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -44,14 +44,16 @@ export default function Navbar() {
       {/* Main Navbar Section */}
       <div className="flex justify-between items-center py-4 flex-wrap">
         {/* Logo Centered on all screen sizes */}
+          <Link href="/">
         <div className="flex justify-center w-full md:w-auto">
           <Image
-            src="/images/asvab-tutoring-logo.webp" // Ensure this image is inside /public/images/
+            src="/images/asvab-tutoring-logo.webp"
             alt="ASVAB Tutoring Logo"
             width={80}
             height={80}
           />
         </div>
+          </Link>
 
         {/* Left Side: Menu Links (Visible only on larger screens) */}
         <div className="hidden md:flex items-center space-x-6 text-lg">
