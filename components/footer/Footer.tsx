@@ -1,7 +1,6 @@
 "use client";
 
 import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
