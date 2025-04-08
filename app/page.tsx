@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Welcome from "./welcome/page";
 import TopCourses from "./topcourses/page";
 import Teachers from "./teachers/page";
