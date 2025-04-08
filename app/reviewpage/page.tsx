@@ -21,10 +21,6 @@ export default function ReviewsPage() {
           </h2>
         </div>
 
-        {/* <button className="inline-flex items-center gap-2 bg-white text-[#00294F] px-6 py-2 rounded shadow hover:bg-gray-100 transition">
-          View All Reviews <FaArrowRight />
-        </button> */}
-
         <Link
           href="/reviews"
           className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded transition"
