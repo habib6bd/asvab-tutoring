@@ -120,7 +120,7 @@ export default function OurPackagesPage() {
 
         <Link
           href="/getstarted"
-          className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded transition"
+          className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded transition-all duration-500 cursor-pointer"
         >
           <FaHandPointRight /> Get Started
         </Link>
