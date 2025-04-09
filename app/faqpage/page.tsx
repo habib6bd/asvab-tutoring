@@ -41,7 +41,7 @@ export default function FAQSection() {
     <section className="bg-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold inline-block relative pb-4">
+          <h2 className="text-3xl md:text-4xl text-gray-800 font-bold inline-block relative pb-4">
             Frequently Asked Questions
             <img
               src="/images/border_v1.png"

@@ -11,7 +11,7 @@ export default function ReviewsPage() {
     >
       <div className="max-w-5xl mx-auto text-center">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold inline-block relative pb-4">
+          <h2 className="text-3xl md:text-4xl text-gray-800 font-bold inline-block relative pb-4">
             Students Reviews
             <img
               src="/images/border_v1.png"
