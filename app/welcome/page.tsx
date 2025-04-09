@@ -1,16 +1,20 @@
-
 export default function Welcome() {
   return (
     <div>
+      {/* Hero Section with Dark Overlay */}
       <div
-        className="min-h-screen bg-black/60 flex items-center justify-center px-4 py-8"
+        className="relative min-h-screen flex items-center justify-center px-4 py-8"
         style={{
           backgroundImage: "url('/images/asvab-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl items-center">
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/70 z-0" />
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl items-center">
           {/* Left: Welcome + Video */}
           <div className="space-y-6 text-white">
             <div>
@@ -21,7 +25,7 @@ export default function Welcome() {
                 10,000+ successful candidates. Online Test Prep for the ASVAB,
                 ASTB, OAR, AFOQT, and SIFT.
               </p>
-              <button className="mt-4 bg-[#f2a155] hover:bg-[#e58a34] text-white font-semibold py-2 px-4 rounded">
+              <button className="mt-4 bg-[#f2a155] hover:bg-[#e58a34] text-white font-semibold py-2 px-4 rounded transition duration-500 cursor-pointer">
                 ENROLL NOW
               </button>
             </div>
@@ -39,7 +43,7 @@ export default function Welcome() {
           </div>
 
           {/* Right: Form */}
-          <div className="bg-[#012241] text-white rounded-lg shadow-lg p-6 space-y-4 w-full">
+          <div className="bg-[#012241] text-white rounded-lg shadow-lg p-6 space-y-4 w-3/4 mx-auto">
             <h2 className="text-lg font-semibold text-center">
               REQUEST A TUTOR NOW!
             </h2>
@@ -78,7 +82,6 @@ export default function Welcome() {
                   <option value="">—Please choose an option—</option>
                   <option value="CA">California</option>
                   <option value="TX">Texas</option>
-                  {/* Add more options */}
                 </select>
               </div>
               <div>
@@ -92,7 +95,7 @@ export default function Welcome() {
               </div>
               <button
                 type="submit"
-                className="w-1/2 bg-[#f2a155] hover:bg-[#e58a34] text-white py-2 rounded mx-auto block mt-6"
+                className="w-1/2 bg-[#f2a155] hover:bg-[#e58a34] text-white py-2 rounded mx-auto block mt-6 transition duration-500 cursor-pointer"
               >
                 Submit
               </button>
@@ -114,9 +117,10 @@ export default function Welcome() {
           </div>
         </div>
       </div>
+
+      {/* Welcome Section */}
       <section className="py-16 px-4 bg-white text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Title with border image under */}
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 inline-block relative pb-4">
             Welcome
             <img
@@ -126,7 +130,6 @@ export default function Welcome() {
             />
           </h2>
 
-          {/* Description */}
           <p className="mt-8 text-gray-700 text-lg leading-relaxed">
             Need help with the ASVAB? We are here for you. No longer do you need
             to prove yourself as a good student by memorizing whole subjects.
@@ -137,9 +140,8 @@ export default function Welcome() {
             streamline the learning process.
           </p>
 
-          {/* Read More Button */}
           <div className="mt-8">
-            <button className="bg-[#f2a155] hover:bg-[#e58a34] text-white font-semibold py-2 px-6 rounded shadow">
+            <button className="bg-[#f2a155] hover:bg-[#e58a34] text-white font-semibold py-2 px-6 rounded shadow transition duration-500 cursor-pointer">
               READ MORE
             </button>
           </div>

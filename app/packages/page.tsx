@@ -1,8 +1,10 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaHandPointRight } from "react-icons/fa";
 
+// Packages array declared at the top
 const packages = [
   {
     title: "SIFT",
@@ -55,42 +57,43 @@ export default function OurPackagesPage() {
           follows.
         </p>
 
-        <h3 className="text-left font-semibold text-lg mb-4">
+        <h3 className="text-center font-semibold text-lg mb-4">
           Select online Tutoring package:
         </h3>
 
-        {/* Packages Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
-          {packages.map((pkg, index) => (
-            <div
-              key={index}
-              className="rounded shadow-md overflow-hidden transition-transform hover:-translate-y-1"
-            >
-              <Image
-                src={pkg.image}
-                alt={pkg.title}
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4 text-left">
-                <h4 className="text-lg font-bold text-blue-900">{pkg.title}</h4>
-                <p className="text-blue-600 font-semibold mb-2">{pkg.price}</p>
-                <button className="flex items-center gap-2 text-sm text-blue-900 border border-blue-900 px-3 py-1 hover:bg-blue-900 hover:text-white transition rounded">
-                  Details <FaArrowRight />
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Packages Grid - Two rows, centered */}
+        <div className="flex flex-wrap justify-center gap-6 mb-10 max-w-[960px] mx-auto">
+  {packages.map((pkg, index) => (
+    <div
+      key={index}
+      className="w-[280px] rounded shadow-md overflow-hidden transition-all duration-500 hover:-translate-y-1 bg-white"
+    >
+      <Image
+        src={pkg.image}
+        alt={pkg.title}
+        width={280}
+        height={192}
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-4 text-left">
+        <h4 className="text-lg font-bold text-blue-900">{pkg.title}</h4>
+        <p className="text-blue-600 font-semibold mb-2">{pkg.price}</p>
+        <button className="flex items-center gap-2 text-sm text-blue-900 border border-blue-900 px-3 py-1 hover:bg-blue-900 hover:text-white transition-all duration-500 rounded cursor-pointer">
+          Details <FaArrowRight />
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         {/* Note */}
-        <p className="text-xs text-gray-700 text-left max-w-4xl mx-auto mb-8">
+        <p className="text-[18px] text-gray-700 text-left max-w-4xl mx-auto mb-4">
           <span className="font-semibold text-red-600">NOTE:</span> No session
           will be scheduled without payment information on file. Students are
-          required to submit homework before each session.{" "}
+          required to submit homework before each session.
         </p>
-        <p className="text-xs text-gray-700 text-left max-w-4xl mx-auto mb-8">
+        <p className="text-[18px] text-gray-700 text-left max-w-4xl mx-auto mb-8">
           <span className="font-semibold text-blue-900">
             Cancellation Policy:
           </span>{" "}
@@ -101,7 +104,7 @@ export default function OurPackagesPage() {
         {/* Enroll Button */}
         <Link
           href="/tutors"
-          className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded transition"
+          className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded transition-all duration-500 cursor-pointer"
         >
           ENROLL NOW
         </Link>

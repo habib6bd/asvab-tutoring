@@ -1,5 +1,3 @@
-// components/TopCourses.tsx
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -52,7 +50,7 @@ export default function TopCourses() {
         {courses.map((course, index) => (
           <div
             key={index}
-            className="bg-white text-gray-800 rounded-md shadow-md flex flex-col"
+            className="bg-white text-gray-800 rounded-md shadow-md flex flex-col transition-all duration-500 hover:-translate-y-1"
           >
             <div className="relative w-full h-48">
               <Image
@@ -66,7 +64,7 @@ export default function TopCourses() {
             <div className="p-4 flex flex-col justify-between flex-grow">
               <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
               <p className="text-sm text-gray-600 mb-4">{course.description}</p>
-              <Link className='mt-auto w-fit bg-transparent border border-gray-800 hover:bg-gray-800 hover:text-white transition px-4 py-2 text-sm font-medium self-start rounded mx-auto block' href={`/courses/${course.slug}`} passHref>          
+              <Link className='mt-auto w-fit bg-transparent border border-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-500 cursor-pointer px-4 py-2 text-sm font-medium self-start rounded mx-auto block' href={`/courses/${course.slug}`} passHref>          
                   LEARN MORE
               </Link>
             </div>
